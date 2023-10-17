@@ -1,0 +1,17 @@
+version: "3"
+services:
+  db:
+    image: mysql:8
+    container_name: mysql-bases1
+    restart: always
+    ports: 
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345678
+      MYSQL_DATABASE: cursos
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      
