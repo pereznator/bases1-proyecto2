@@ -69,7 +69,7 @@ select registrarEstudiante(
 	56347131,
 	"direccion",
 	3004272120101,
-	2
+	1
 );
 
 

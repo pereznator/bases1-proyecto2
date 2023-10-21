@@ -21,6 +21,8 @@ BEGIN
 	DECLARE creditos INT;
 	DECLARE carreraEstudiante INT;
 	DECLARE carreraCurso INT;
+	DECLARE estudiantesAsignadosEnCurso INT;
+	DECLARE cupoParaCurso INT;
 
 	SET cicloMayusculas = UPPER(_ciclo);
 
@@ -57,7 +59,7 @@ BEGIN
 	SELECT c.creditosNecesarios, c.carrera  INTO creditosNecesarios, carreraCurso FROM curso c WHERE c.codigo = _codigoCurso;
 
 	-- Validar que el curso sea de la misma carrera que la del estudiante
-	IF carreraCurso != 0 THEN 
+	IF carreraCurso IS NOT NULL THEN 
 		IF carreraCurso != carreraEstudiante THEN
 			SET mensajeError = "No se puede asignar un curso de una carrera distinta a la del estudiante.";
 			SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
@@ -86,7 +88,7 @@ BEGIN
 
 	
 	-- Obtener el id del curso habilitado
-	SELECT ch.id INTO _idCursoHabilitado FROM cursoHabilitado ch WHERE 
+	SELECT ch.id, ch.cupoMaximo, ch.estudiantesAsignatos INTO _idCursoHabilitado, cupoParaCurso, estudiantesAsignadosEnCurso FROM cursoHabilitado ch WHERE 
 	ch.codigoCurso = _codigoCurso 
 	AND ch.ciclo = cicloMayusculas
 	AND ch.seccion = seccionMayuscula
@@ -95,6 +97,11 @@ BEGIN
 	-- Validar que el curso habilitado existe
 	IF _idCursoHabilitado IS NULL THEN
 		SET mensajeError = "No se encontro curso habilitado con los parametros ingresados.";
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
+	END IF;
+
+	IF cupoParaCurso >= estudiantesAsignadosEnCurso THEN
+		SET mensajeError = "Ya no hay cupo en esta seccion.";
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
 	END IF;
 
@@ -121,7 +128,7 @@ BEGIN
 END;
 
 
-SELECT asignarCurso(72, "1s", "b", 201900810);
+SELECT asignarCurso(119, "2s", "b", 201900810);
 
 
 

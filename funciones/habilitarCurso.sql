@@ -82,11 +82,11 @@ BEGIN
 END;
 
 SELECT habilitarCurso(
-	72,
-	"as",
-	1343434545454,
+	119,
+	"1s",
+	3004272120101,
 	50,
-	'a'
+	'b'
 );
 
 DROP FUNCTION habilitarCurso;

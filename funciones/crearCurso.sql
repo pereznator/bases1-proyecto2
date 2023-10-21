@@ -14,6 +14,9 @@ BEGIN
 	DECLARE existeCurso BOOL;
 	DECLARE existeCarrera BOOL;
 	DECLARE codigoDeCursoCreado INT;
+	DECLARE valorCodigoCarrera INT;
+
+	SET valorCodigoCarrera = _codigoCarrera;
 
 	IF _creditosNecesarios < 0 THEN
 		SET mensajeError = "ERROR: Creditos necesarios debe ser mayor o igual a cero.";
@@ -25,11 +28,16 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
     END IF;
    
-   SELECT COUNT(*) INTO existeCarrera FROM carrera WHERE id = _codigoCarrera;
-  	IF existeCarrera = FALSE THEN
-  		SET mensajeError = "No existe una carrera con ese codigo.";
-  		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
-  	END IF;
+   	IF _codigoCarrera != 0 THEN 
+	   SELECT COUNT(*) INTO existeCarrera FROM carrera WHERE id = _codigoCarrera;
+	  	IF existeCarrera = FALSE THEN
+	  		SET mensajeError = "No existe una carrera con ese codigo.";
+	  		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
+	  	END IF;
+	ELSE 
+		SET valorCodigoCarrera = NULL;
+   	END IF;
+   
    
   	SELECT COUNT(*) INTO existeCurso FROM curso WHERE codigo = _codigo;
   	IF existeCurso = TRUE THEN
@@ -49,7 +57,7 @@ BEGIN
 		_nombre,
 		_creditosNecesarios,
 		_cretidosOtorgados,
-		_codigoCarrera,
+		valorCodigoCarrera,
 		_esObligatorio
   	);
   
@@ -59,11 +67,11 @@ END;
 
 
 SELECT crearCurso(
-	140,
-	"Compi 1",
-	125,
+	119,
+	"Matematica Basica 1",
+	10,
 	5,
-	2,
+	0,
 	TRUE
 );
 

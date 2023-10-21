@@ -50,7 +50,7 @@ CREATE TABLE curso (
 	nombre VARCHAR(250) NOT NULL,
 	creditosNecesarios INT NOT NULL,
 	creditosOtorgados INT NOT NULL,
-	carrera INT NOT NULL,
+	carrera INT,
 	obligatorio BOOL NOT NULL,
 	PRIMARY KEY (codigo)
 );
@@ -114,6 +114,18 @@ drop table horario;
 drop table cursoHabilitado;
 drop table docente ;
 drop table curso;
+
+
+-- Listar Funciones
+SELECT ROUTINE_NAME, ROUTINE_TYPE
+FROM information_schema.ROUTINES
+WHERE ROUTINE_SCHEMA = 'cursos' AND ROUTINE_TYPE = 'FUNCTION';
+
+
+
+
+
+
 
 
 
