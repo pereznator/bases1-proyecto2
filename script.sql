@@ -7,7 +7,6 @@ CREATE TABLE carrera (
     PRIMARY KEY (id)
 );
 
-
 # TABLA ESTUDIANTE
 CREATE TABLE estudiante (
 	carnet BIGINT NOT NULL,
@@ -21,7 +20,8 @@ CREATE TABLE estudiante (
 	creditos INT NOT NULL DEFAULT 0,
 	idCarrera INT NOT NULL,
 	creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (carnet)
+	PRIMARY KEY (carnet),
+	FOREIGN KEY (idCarrera) REFERENCES carrera (id)
 );
 
 --- Agregar llave foranea a tabla estudiante
@@ -65,7 +65,8 @@ CREATE TABLE cursoHabilitado (
 	cupoMaximo INT NOT NULL,
 	anio YEAR NOT NULL,
 	estudiantesAsignatos INT NOT NULL DEFAULT 0,
-	PRIMARY KEY (id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (dpiDocente) REFERENCES docente (dpi)
 );
 
 ALTER TABLE cursoHabilitado 
@@ -104,59 +105,15 @@ CREATE TABLE nota (
 	FOREIGN KEY (carnet) REFERENCES estudiante(carnet),
 	FOREIGN KEY (idCursoHabilitado) REFERENCES cursoHabilitado(id)
 );
-   
-# REGISTRAR ESTUDIANTE
-CREATE FUNCTION registrarEstudiante (
-	carnet BIGINT,
-	nombres VARCHAR(250),
-	apellidos VARCHAR(250),
-	fechaNacimiento DATE,
-	correo VARCHAR(250),
-	telefono INT,
-	direccion VARCHAR(250),
-	dpi BIGINT,
-	carrera INT
-)
-RETURNS INT
-BEGIN
-    DECLARE nuevoCarnet INT;
-    
-    INSERT INTO mi_tabla (nombre) VALUES (nuevo_nombre);
-    SET nuevoCarnet = LAST_INSERT_ID();
-
-    RETURN nuevoCarnet;
-END;
-
-
-# FUNCION CREAR CARRERA
-CREATE FUNCTION crearCarrera (
-	nombreNuevaCarrera VARCHAR(250)
-)
-RETURNS INT
-DETERMINISTIC
-BEGIN 
-	DECLARE nuevaCarreraId INT;
-
-	INSERT INTO carrera (nombre) values (nombreNuevaCarrera);
-
-	SET nuevaCarreraId = LAST_INSERT_ID();
-
-	RETURN nuevaCarreraId;
-END;
-
-SELECT crearCarrera('Sistemas de Bases de Datos 1');
-
-DROP FUNCTION IF EXISTS crearCarrera;
-
 
 # ELIMINAR TABLAS
-drop table estudiante 
-drop table docente
-drop table curso
-drop table cursoHabilitado
+drop table asignacion;
+drop table estudiante;
+drop table carrera;
 drop table horario;
-drop table asignacion
+drop table cursoHabilitado;
+drop table docente ;
+drop table curso;
 
-select YEAR(NOW())
 
-# 3004272120101
+
