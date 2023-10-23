@@ -88,7 +88,7 @@ BEGIN
 
 	
 	-- Obtener el id del curso habilitado
-	SELECT ch.id, ch.cupoMaximo, ch.estudiantesAsignatos INTO _idCursoHabilitado, cupoParaCurso, estudiantesAsignadosEnCurso FROM cursoHabilitado ch WHERE 
+	SELECT ch.id, ch.cupoMaximo, ch.estudiantesAsignados INTO _idCursoHabilitado, cupoParaCurso, estudiantesAsignadosEnCurso FROM cursoHabilitado ch WHERE 
 	ch.codigoCurso = _codigoCurso 
 	AND ch.ciclo = cicloMayusculas
 	AND ch.seccion = seccionMayuscula
@@ -100,7 +100,7 @@ BEGIN
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
 	END IF;
 
-	IF cupoParaCurso >= estudiantesAsignadosEnCurso THEN
+	IF cupoParaCurso <= estudiantesAsignadosEnCurso THEN
 		SET mensajeError = "Ya no hay cupo en esta seccion.";
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
 	END IF;
@@ -123,12 +123,12 @@ AFTER INSERT ON asignacion
 FOR EACH ROW 
 BEGIN 
 	UPDATE cursoHabilitado 
-	SET estudiantesAsignatos = estudiantesAsignatos + 1
+	SET estudiantesAsignados = estudiantesAsignados + 1
 	WHERE id = NEW.idCursoHabilitado;
 END;
 
 
-SELECT asignarCurso(119, "2s", "b", 201900810);
+SELECT asignarCurso(119, "1s", "a", 201900810);
 
 
 

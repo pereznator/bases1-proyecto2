@@ -1,12 +1,12 @@
 -- FUNCION REGISTRAR DOCENTE
 CREATE FUNCTION registrarDocente(
-	_dpi BIGINT,
 	_nombres VARCHAR(250),
 	_apelliddos VARCHAR(250),
 	_fechaNacimiento DATE,
 	_correo VARCHAR(250),
 	_telefono INT,
 	_direccion VARCHAR(250),
+	_dpi BIGINT,
 	_registroSif INT
 )
 RETURNS VARCHAR(250)

@@ -23,12 +23,6 @@ CREATE TABLE estudiante (
 	PRIMARY KEY (carnet),
 	FOREIGN KEY (idCarrera) REFERENCES carrera (id)
 );
-
---- Agregar llave foranea a tabla estudiante
-ALTER TABLE estudiante
-	ADD CONSTRAINT estudiante_carrera_fk FOREIGN KEY ( idCarrera )
-    REFERENCES carrera ( id )
-    ON DELETE CASCADE;
    
 # TABLA DOCENTE
 CREATE TABLE docente (
@@ -64,15 +58,11 @@ CREATE TABLE cursoHabilitado (
 	dpiDocente BIGINT NOT NULL,
 	cupoMaximo INT NOT NULL,
 	anio YEAR NOT NULL,
-	estudiantesAsignatos INT NOT NULL DEFAULT 0,
+	estudiantesAsignados INT NOT NULL DEFAULT 0,
 	PRIMARY KEY (id),
 	FOREIGN KEY (dpiDocente) REFERENCES docente (dpi)
 );
 
-ALTER TABLE cursoHabilitado 
-	ADD CONSTRAINT cursoHabilitado_docente_fk FOREIGN KEY ( dpiDocente )
-    REFERENCES docente ( dpi )
-    ON DELETE CASCADE;
 
 # TRIGGER PARA AGREGAR AÑO CADA VEZ QUE SE INSERTE UN REGISTRO EN LA TABLA CURSO HABILITADO
 CREATE TRIGGER ins_anio
@@ -101,20 +91,48 @@ CREATE TABLE nota (
 	carnet BIGINT NOT NULL,
 	idCursoHabilitado INT NOT NULL,
 	nota INT NOT NULL,
+	aprobada BOOL NOT NULL,
 	PRIMARY KEY (carnet, idCursoHabilitado),
 	FOREIGN KEY (carnet) REFERENCES estudiante(carnet),
 	FOREIGN KEY (idCursoHabilitado) REFERENCES cursoHabilitado(id)
 );
 
+CREATE TABLE acta (
+	idCursoHabilitado INT NOT NULL,
+	ciclo CHAR(2) NOT NULL,
+	seccion CHAR(1) NOT NULL,
+	anio YEAR NOT NULL,
+	generadaEn TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY(idCursoHabilitado, ciclo, seccion, anio),
+	FOREIGN KEY (idCursoHabilitado) REFERENCES cursoHabilitado(id)
+);
+
+CREATE TRIGGER acta_anio
+BEFORE INSERT ON acta
+    FOR EACH ROW SET NEW.anio = YEAR(NOW());
+
 # ELIMINAR TABLAS
 drop table asignacion;
+drop table acta;
+drop table nota;
 drop table estudiante;
 drop table carrera;
 drop table horario;
 drop table cursoHabilitado;
-drop table docente ;
+drop table docente;
 drop table curso;
 
+-- ELIMINAR FUNCIONES
+drop function crearCarrera;
+drop function registrarEstudiante;
+DROP FUNCTION registrarDocente;
+DROP FUNCTION crearCurso;
+DROP FUNCTION habilitarCurso;
+DROP FUNCTION agregarHorario;
+DROP FUNCTION asignarCurso;
+DROP FUNCTION desasignarCurso;
+DROP FUNCTION ingresarNota;
+DROP FUNCTION generarActa;
 
 -- Listar Funciones
 SELECT ROUTINE_NAME, ROUTINE_TYPE
@@ -123,9 +141,46 @@ WHERE ROUTINE_SCHEMA = 'cursos' AND ROUTINE_TYPE = 'FUNCTION';
 
 
 
+-- 1. CREAR CARRERA
+-- SELECT crearCarrera(NOMBRE)
+SELECT crearCarrera("Ingenieria Industrial");
+
+-- 2. REGISTRAR ESTUDIANTE
+-- SELECT registrarEstudiante(CARNET, NOMBRES, APELLIDOS, FECHA NACIMIENTO, CORREO, TELEFONO, DIRECCION, DPI, ID CARRERA);
+SELECT registrarEstudiante(202000001, "Juan", "Perez", "2000-01-01", "email@gmail.com", 12345678, "direccion", 1234567890123, 2);
+
+-- 3. REGISTRAR DOCENTE
+-- SELECT registrarDocente(NOMBRES, APELLIDOS, FECHA NAC, CORREO, TELEFONO, DIRECCION, DPI, SIF);
+SELECT registrarDocente("Luis Fernando", "Espino", "1979-01-01", "luis.esp@gmail.com", 12345678, "guatemala", 1234567890987, 1);
+
+-- 4. CREAR CURSO
+-- SELECT crearCurso(CODIGO, NOMBRE, CREDITOS NECESARIOS, CREDITOS OTORGADOS, ID CARRERA, OBLIGATORIO);
+SELECT crearCurso(996, "Organizacion Computacional", 0, 5, 2, true);
+
+-- 5. HBILITAR CURSO
+-- SELECT habilitarCurso(CODIGO CURSO, CICLO, DOCENTE, CUPO, SECCION);
+SELECT habilitarCurso(996, "1S", 3004272120101, 60, "A");
+
+-- 6. AGREGAR HORARIO
+SELECT agregarHorario(ID CURSO HABILITADO, DIA, HORARIO);
+SELECT agregarHorario(2, 1, "10:40-12:20");
+
+-- 7. ASIGNACION DE CURSO
+-- SELECT asignarCurso(CODIGO DE CURSO, CICLO, SECCION, CARNET);
+SELECT asignarCurso(996, "1s", "a", 202000001);
+
+-- 8. DESASIGNACION DE CURSO
+-- SELECT desasignarCurso(CODIGO DE CURSO, CICLO, SECCION, CARNET);
+SELECT desasignarCurso(996, "1s", "a", 202000001);
 
 
+-- 9. INGRESAR NOTAS
+-- SELECT ingresarNota(CODIGO CURSO, CICLO, SECCION, CARNET, NOTA);
+SELECT ingresarNota(996, "1s", "a", 202000001, 89);
 
 
+-- 10. GENERAR ACTA
+-- SELECT generarActa(CODIGO CURSO, CICLO, SECCION);
+SELECT generarActa(996, "1s", "a");
 
 

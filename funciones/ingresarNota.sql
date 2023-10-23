@@ -1,14 +1,16 @@
--- FUNCION DESASIGNAR CURSO
-CREATE FUNCTION desasignarCurso(
+-- FUNCION INGRESAR NOTA
+CREATE FUNCTION ingresarNota (
 	_codigoCurso INT,
 	_ciclo CHAR(2),
 	_seccion CHAR(1),
-	_carnet BIGINT
+	_carnet BIGINT,
+	_nota DECIMAL(10, 2)
 )
 RETURNS INT
 DETERMINISTIC
 BEGIN
 	DECLARE mensajeError VARCHAR(250);
+	DECLARE notaRedondeada INT;
 	DECLARE cicloMayusculas CHAR(2);
 	DECLARE seccionMayuscula CHAR(1);
 	DECLARE esSeccionValida BOOL;
@@ -16,6 +18,15 @@ BEGIN
 	DECLARE existeEstudiante BOOL;
 	DECLARE _idCursoHabilitado BOOL;
 	DECLARE existeAsignacion BOOL;
+	DECLARE cursoAprobado BOOL;
+	DECLARE creditos INT;
+	SET notaRedondeada = ROUND(_nota);
+
+	IF notaRedondeada < 0 THEN
+		SET mensajeError = "Nota debe ser un numero positivo.";
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
+	END IF;
+
 	SET cicloMayusculas = UPPER(_ciclo);
 
 	-- Validar que el ciclo tenga formato correcto
@@ -68,32 +79,35 @@ BEGIN
 		SET mensajeError = "El estudiante no esta asignado al curso habilitado.";
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
 	END IF;
+
+	SET cursoAprobado = notaRedondeada >= 61;
+
+	IF cursoAprobado THEN
+		SELECT c.creditosOtorgados INTO creditos FROM curso c WHERE c.codigo = _codigoCurso;
+		UPDATE estudiante e SET e.creditos = e.creditos + creditos WHERE e.carnet = _carnet; 
+	END IF;
 	
-	DELETE FROM asignacion WHERE carnet = _carnet and idCursoHabilitado = _idCursoHabilitado;
+	INSERT INTO nota (
+		carnet,
+		idCursoHabilitado,
+		nota,
+		aprobada
+	) VALUES (
+		_carnet,
+		_idCursoHabilitado,
+		notaRedondeada,
+		cursoAprobado
+	);
 
 	RETURN _idCursoHabilitado;
-	
+
 END;
 
 
-
--- TRIGGER PARA DISMINUIR LA CANTIDAD DE ESTUDIANTES ASIGNADOS A CURSO HABILITADO
-CREATE TRIGGER disminuirEstudiantesAsignados
-AFTER DELETE ON asignacion
-FOR EACH ROW
-BEGIN
-    -- Decrementa el valor de estudiantesAsignados en la tabla Curso
-    UPDATE cursoHabilitado
-    SET estudiantesAsignados = estudiantesAsignados - 1
-    WHERE id = OLD.idCursoHabilitado;
-END;
-
-SELECT desasignarCurso(119, "1s", "a", 201900810);
+SELECT ingresarNota(119, "1s", "a", 201900810, 61);
 
 
-DROP FUNCTION desasignarCurso;
-
-
+DROP FUNCTION ingresarNota;
 
 
 

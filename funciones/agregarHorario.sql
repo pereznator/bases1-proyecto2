@@ -43,7 +43,7 @@ BEGIN
 END;
 
 
-SELECT agregarHorario(1, 2, "10:40-12:20");
+SELECT agregarHorario(1, 1, "10:40-12:20");
 
 
 DROP FUNCTION agregarHorario;

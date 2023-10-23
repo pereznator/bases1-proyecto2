@@ -86,7 +86,7 @@ SELECT habilitarCurso(
 	"1s",
 	3004272120101,
 	50,
-	'b'
+	'a'
 );
 
 DROP FUNCTION habilitarCurso;
