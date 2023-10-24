@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="941CCD28-0515-A8E6-F46F-F4BAB844FAC8" name="HORARIO">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:24:29 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idCursoHabilitado" id="2784D185-49C3-5326-4E51-A1BD3D8DA805">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:35:43 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dia" id="61F1FF6D-EA08-16D7-D289-558D6F3BF5E2">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:35:57 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="horario" id="60A7695B-06DC-52D4-DF9D-D90C2DB4FB13">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:04 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="5778915D-78CA-DBE6-3CE6-39B9BA8E2F08">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:47:16 UTC</createdTime>
+<generatorID>089AA2D0-ED9D-D7AB-88D1-68FD373474CB</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>181B66C8-57CF-FBF0-66C1-488A81014E47</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BDF24733-2B2D-3E1E-D9BB-316113F964D1" name="HORARIO PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:35:55 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2784D185-49C3-5326-4E51-A1BD3D8DA805</attributeRef>
+<attributeRef>61F1FF6D-EA08-16D7-D289-558D6F3BF5E2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

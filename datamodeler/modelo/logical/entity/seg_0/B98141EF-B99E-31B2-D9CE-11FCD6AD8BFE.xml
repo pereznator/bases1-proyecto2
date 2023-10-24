@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B98141EF-B99E-31B2-D9CE-11FCD6AD8BFE" name="DOCENTE">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:25:05 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="siif" id="76E5E934-3ADF-9279-3F17-0B5759387DF2">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:25 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombres" id="D4F99796-7B58-8C91-0C89-DEC9285580E1">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:29 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellidos" id="CFE4D751-1999-D507-D620-F7E8E5A733CF">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:36 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dpi" id="F3A9306D-F4C0-FFBA-D80B-2124EA79BB7A">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:40 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechaNacimiento" id="A1883C60-A133-5C27-627F-F691A6D17CE4">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:53 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="70BDC8AA-4926-99FE-931A-F5E08889773B">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:58 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="CBDC512D-BE07-89DA-90D3-C91CB5176C10">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:37:13 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="direccion" id="54465FF1-886A-2EBA-FB4E-4CAC2C774A89">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:37:16 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creado" id="A9F27AC5-8ADE-2688-F765-C7B940D9C1E9">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:37:34 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="39155371-ECE9-30B6-5328-E43DAA970EB0" name="DOCENTE PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:36:28 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>76E5E934-3ADF-9279-3F17-0B5759387DF2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

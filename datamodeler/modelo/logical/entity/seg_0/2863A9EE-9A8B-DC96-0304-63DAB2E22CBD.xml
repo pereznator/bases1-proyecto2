@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2863A9EE-9A8B-DC96-0304-63DAB2E22CBD" name="CURSO">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:23:56 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="codigo" id="CAE53B11-EAC1-88C3-289B-24B4D034503B">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:26:33 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="AB24CE64-D32C-DAE9-BDB2-108D22C30484">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:27:43 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>A3A3C77D-0366-9768-FF89-1C25E56881C8</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creditosNecesarios" id="A7310479-5745-DC35-B466-23B73CBB9770">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:33:14 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creditosOtorgados" id="1935DA2E-99BC-7E86-8EE0-5EDD16332DB3">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:33:22 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="obligatorio" id="C604DACD-4F5B-970B-C5FF-B759D9483640">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:33:32 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="91EAACE0-6BBE-4803-9042-8B1BD020E1AC">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:45:56 UTC</createdTime>
+<generatorID>B97015AD-104C-4B40-72CB-C9127153B373</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>507DC274-D902-CBE4-08AA-8D5C7CEA8035</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="74CA3AF0-C5C5-9A57-5F3B-0C1EE29353E5" name="CURSO PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:27:39 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CAE53B11-EAC1-88C3-289B-24B4D034503B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

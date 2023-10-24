@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CF37D84C-16E7-9724-A0DC-2F351DB31D4A" name="ACTA">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:24:27 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idCursoHabilitado" id="3A0FBF7F-AE78-CDD7-39D2-3981C5CFACEC">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:39:19 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ciclo" id="0558AD61-412D-BA52-F89C-5EA6559BA845">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:41:16 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="seccion" id="B1BC4CCB-B23D-C0C6-E33B-155D5D82869A">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:41:22 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="anio" id="7E39FE9A-BF94-74F1-0483-7335DC729ED1">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:41:27 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creado" id="B7868783-0D41-651A-F0EF-11EB8ECC8236">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:41:38 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="F993F600-1E35-985C-841B-A7F4F53D0D9E">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:47:22 UTC</createdTime>
+<generatorID>2CDCD6BE-B842-8F66-0071-75DBDCC99B3B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>181B66C8-57CF-FBF0-66C1-488A81014E47</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BECECFC6-E3DC-C3E1-0C77-53F5B723C900" name="ACTA PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:41:15 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3A0FBF7F-AE78-CDD7-39D2-3981C5CFACEC</attributeRef>
+<attributeRef>0558AD61-412D-BA52-F89C-5EA6559BA845</attributeRef>
+<attributeRef>B1BC4CCB-B23D-C0C6-E33B-155D5D82869A</attributeRef>
+<attributeRef>7E39FE9A-BF94-74F1-0483-7335DC729ED1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

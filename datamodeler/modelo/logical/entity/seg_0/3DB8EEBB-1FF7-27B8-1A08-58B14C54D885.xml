@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3DB8EEBB-1FF7-27B8-1A08-58B14C54D885" name="NOTA">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:24:21 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="idCursoHabilitado" id="32949581-8027-CCC8-BD33-0ACE6F23D7DF">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:41:59 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="carnet" id="153BF24A-AEF4-9481-0C93-E80618E5106D">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:42:11 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nota" id="E9F95528-4090-125B-1AD2-AA614A6173DB">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:42:15 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="aprobado" id="EB0784EF-A2B5-45EC-1E52-ABD9635CEF7A">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:42:19 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="0A044410-29E0-C6B5-5006-439FA14F8893">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:48:12 UTC</createdTime>
+<generatorID>079631DC-D452-11C8-5E53-7DDEFFBA8AE4</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>181B66C8-57CF-FBF0-66C1-488A81014E47</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="carnet1" id="91A93FDC-ED96-6CDC-A83D-6CEEE0FD364B">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:48:27 UTC</createdTime>
+<generatorID>E82DD04A-948E-B2DC-3DAE-8AD754AAC089</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>E72A3FE4-902E-6E58-746E-68406874C86C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5E85EF0C-2F27-F059-7DAE-B4E426DDF2E4" name="NOTA PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:42:10 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>32949581-8027-CCC8-BD33-0ACE6F23D7DF</attributeRef>
+<attributeRef>153BF24A-AEF4-9481-0C93-E80618E5106D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

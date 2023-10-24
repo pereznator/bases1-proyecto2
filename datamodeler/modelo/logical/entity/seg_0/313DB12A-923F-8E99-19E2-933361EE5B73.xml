@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="313DB12A-923F-8E99-19E2-933361EE5B73" name="DESASIGNACION">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:24:33 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="carnet" id="EDBD9766-7EB7-DDBD-B39C-5EEBF0D35A18">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:38:23 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="idCursoHabilitado" id="13BB9FA5-006B-28B1-45AE-FB61216C65E8">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:38:28 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="creado" id="E180E452-C25E-280C-4F05-5019D5D8E229">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:38:36 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id" id="845C3405-8CEF-AA88-80BA-BE1E163D866C">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:48:07 UTC</createdTime>
+<generatorID>7D873F06-1CE3-064F-7C2A-59BD187BCA8D</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>181B66C8-57CF-FBF0-66C1-488A81014E47</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="carnet1" id="817E3CCE-4FA7-CC92-1E19-FC8F50912592">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:48:31 UTC</createdTime>
+<generatorID>33268B54-67C3-4036-5963-A92737867F62</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<referedAttribute>E72A3FE4-902E-6E58-746E-68406874C86C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0CA8433D-E198-F25F-AB9D-D84BD3226D42" name="DESASIGNACION PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:38:24 UTC</createdTime>
+<ownerDesignName>modelo</ownerDesignName>
+<engineerTo>
+<item key="F489A7FF-9458-D99E-0DE8-8D6DF16C98F0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EDBD9766-7EB7-DDBD-B39C-5EEBF0D35A18</attributeRef>
+<attributeRef>13BB9FA5-006B-28B1-45AE-FB61216C65E8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
