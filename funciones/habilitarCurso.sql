@@ -3,7 +3,7 @@
 CREATE FUNCTION habilitarCurso (
 	_codigoCurso INT,
 	_ciclo CHAR(2),
-	_dpiDocente BIGINT,
+	_siifDocente BIGINT,
 	_cupoMaximo INT,
 	_seccion CHAR(1)
 )
@@ -45,9 +45,9 @@ BEGIN
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;	
 	END IF;
 
-	SELECT COUNT(*) INTO existeDocente FROM docente WHERE dpi = _dpiDocente;
+	SELECT COUNT(*) INTO existeDocente FROM docente d WHERE d.siif = _siifDocente;
 	IF existeDocente = FALSE THEN
-		SET mensajeError = "No se encontro docente con ese dpi.";
+		SET mensajeError = "No se encontro docente con ese codigo siif.";
 		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = mensajeError;
 	END IF;
 
@@ -66,13 +66,13 @@ BEGIN
 		codigoCurso,
 		ciclo,
 		seccion,
-		dpiDocente,
+		siifDocente,
 		cupoMaximo
 	) VALUES (
 		_codigoCurso,
 		cicloMayusculas,
 		seccionMayuscula,
-		_dpiDocente,
+		_siifDocente,
 		_cupoMaximo
 	);
 
@@ -84,7 +84,7 @@ END;
 SELECT habilitarCurso(
 	119,
 	"1s",
-	3004272120101,
+	1,
 	50,
 	'a'
 );

@@ -76,7 +76,6 @@ BEGIN
 END;
 
 
-
 -- TRIGGER PARA DISMINUIR LA CANTIDAD DE ESTUDIANTES ASIGNADOS A CURSO HABILITADO
 CREATE TRIGGER disminuirEstudiantesAsignados
 AFTER DELETE ON asignacion
@@ -86,7 +85,10 @@ BEGIN
     UPDATE cursoHabilitado
     SET estudiantesAsignados = estudiantesAsignados - 1
     WHERE id = OLD.idCursoHabilitado;
+   
+   INSERT INTO desasignacion (idCursoHabilitado, carnet) VALUES (OLD.idCursoHabilitado, OLD.carnet);
 END;
+
 
 SELECT desasignarCurso(119, "1s", "a", 201900810);
 
@@ -94,6 +96,7 @@ SELECT desasignarCurso(119, "1s", "a", 201900810);
 DROP FUNCTION desasignarCurso;
 
 
+DROP TRIGGER disminuirEstudiantesAsignados;
 
 
 

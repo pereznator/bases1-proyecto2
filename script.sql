@@ -26,6 +26,7 @@ CREATE TABLE estudiante (
    
 # TABLA DOCENTE
 CREATE TABLE docente (
+	siif BIGINT NOT NULL,
 	dpi BIGINT NOT NULL,
 	nombres VARCHAR(250) NOT NULL,
 	apellidos VARCHAR(250) NOT NULL,
@@ -33,9 +34,8 @@ CREATE TABLE docente (
 	correo VARCHAR(250) NOT NULL,
 	telefono INT NOT NULL,
 	direccion VARCHAR(250) NOT NULL,
-	registroSif INT NOT NULL,
 	creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (dpi)
+	PRIMARY KEY (siif)
 );
 
 # TABLA CURSO
@@ -55,12 +55,12 @@ CREATE TABLE cursoHabilitado (
 	codigoCurso INT NOT NULL,
 	ciclo CHAR(2) NOT NULL,
 	seccion CHAR(1) NOT NULL,
-	dpiDocente BIGINT NOT NULL,
+	siifDocente BIGINT NOT NULL,
 	cupoMaximo INT NOT NULL,
 	anio YEAR NOT NULL,
 	estudiantesAsignados INT NOT NULL DEFAULT 0,
 	PRIMARY KEY (id),
-	FOREIGN KEY (dpiDocente) REFERENCES docente (dpi)
+	FOREIGN KEY (siifDocente) REFERENCES docente (siif)
 );
 
 
@@ -106,21 +106,42 @@ CREATE TABLE acta (
 	PRIMARY KEY(idCursoHabilitado, ciclo, seccion, anio),
 	FOREIGN KEY (idCursoHabilitado) REFERENCES cursoHabilitado(id)
 );
-
 CREATE TRIGGER acta_anio
 BEFORE INSERT ON acta
     FOR EACH ROW SET NEW.anio = YEAR(NOW());
 
+CREATE TABLE desasignacion (
+	id INT NOT NULL AUTO_INCREMENT,
+	idCursoHabilitado INT NOT NULL,
+	carnet BIGINT NOT NULL,
+	creadoEn TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (id),
+	FOREIGN KEY (idCursoHabilitado) REFERENCES cursoHabilitado(id),
+	FOREIGN KEY (carnet) REFERENCES estudiante(carnet)
+);
+
+CREATE TABLE IF NOT EXISTS transaccion (
+    id INT NOT NULL AUTO_INCREMENT,
+    fechaHoraDeCreacion TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    descripcion VARCHAR(255) NOT NULL,
+    tipo ENUM('INSERT', 'UPDATE', 'DELETE') NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+
 # ELIMINAR TABLAS
 drop table asignacion;
 drop table acta;
+drop table desasignacion;
 drop table nota;
 drop table estudiante;
-drop table carrera;
 drop table horario;
 drop table cursoHabilitado;
 drop table docente;
+drop table carrera;
 drop table curso;
+
 
 -- ELIMINAR FUNCIONES
 drop function crearCarrera;
@@ -151,15 +172,15 @@ SELECT registrarEstudiante(202000001, "Juan", "Perez", "2000-01-01", "email@gmai
 
 -- 3. REGISTRAR DOCENTE
 -- SELECT registrarDocente(NOMBRES, APELLIDOS, FECHA NAC, CORREO, TELEFONO, DIRECCION, DPI, SIF);
-SELECT registrarDocente("Luis Fernando", "Espino", "1979-01-01", "luis.esp@gmail.com", 12345678, "guatemala", 1234567890987, 1);
+SELECT registrarDocente("Otto", "Escobar Leiva", "1979-01-01", "otto.escobar@gmail.com", 12345678, "guatemala", 12334435454, 123445465);
 
 -- 4. CREAR CURSO
 -- SELECT crearCurso(CODIGO, NOMBRE, CREDITOS NECESARIOS, CREDITOS OTORGADOS, ID CARRERA, OBLIGATORIO);
 SELECT crearCurso(996, "Organizacion Computacional", 0, 5, 2, true);
 
 -- 5. HBILITAR CURSO
--- SELECT habilitarCurso(CODIGO CURSO, CICLO, DOCENTE, CUPO, SECCION);
-SELECT habilitarCurso(996, "1S", 3004272120101, 60, "A");
+-- SELECT habilitarCurso(CODIGO CURSO, CICLO, SIIF DOCENTE, CUPO, SECCION);
+SELECT habilitarCurso(996, "1S", 1, 60, "A");
 
 -- 6. AGREGAR HORARIO
 SELECT agregarHorario(ID CURSO HABILITADO, DIA, HORARIO);
@@ -167,11 +188,11 @@ SELECT agregarHorario(2, 1, "10:40-12:20");
 
 -- 7. ASIGNACION DE CURSO
 -- SELECT asignarCurso(CODIGO DE CURSO, CICLO, SECCION, CARNET);
-SELECT asignarCurso(996, "1s", "a", 202000001);
+SELECT asignarCurso(119, "1s", "a", 202000001);
 
 -- 8. DESASIGNACION DE CURSO
 -- SELECT desasignarCurso(CODIGO DE CURSO, CICLO, SECCION, CARNET);
-SELECT desasignarCurso(996, "1s", "a", 202000001);
+SELECT desasignarCurso(119, "1s", "a", 202000001);
 
 
 -- 9. INGRESAR NOTAS

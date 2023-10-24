@@ -7,7 +7,7 @@ CREATE FUNCTION registrarDocente(
 	_telefono INT,
 	_direccion VARCHAR(250),
 	_dpi BIGINT,
-	_registroSif INT
+	_registroSif BIGINT
 )
 RETURNS VARCHAR(250)
 DETERMINISTIC
@@ -25,23 +25,23 @@ BEGIN
 	END IF;
 
 	INSERT INTO docente (
+		siif,
 		dpi,
 		nombres,
 		apellidos,
 		fechaNacimiento,
 		correo,
 		telefono,
-		direccion,
-		registroSif
+		direccion
 	) VALUES (
+		_registroSif,
 		_dpi,
 		_nombres,
 		_apelliddos,
 		_fechaNacimiento,
 		_correo,
 		_telefono,
-		_direccion,
-		_registroSif
+		_direccion
 	);
 
 	SET mensajeRespuesta = "EXITO: Docente creado exitosamente.";
