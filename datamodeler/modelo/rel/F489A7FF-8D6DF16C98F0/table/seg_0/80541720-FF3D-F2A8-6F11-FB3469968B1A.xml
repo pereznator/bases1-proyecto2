@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="80541720-FF3D-F2A8-6F11-FB3469968B1A" name="CURSO_HABILITADO">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>C9B22154-4D84-DB58-CCA4-84C31256590C</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="3FCC9DE0-5F9B-4777-2D87-5BF7BDB09CCF">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>181B66C8-57CF-FBF0-66C1-488A81014E47</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ciclo" id="514ED036-F76A-9190-5011-36DED2805AA8">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>ACD1C47E-2D20-65FE-90D5-19B9334365C5</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="B7DD2E99-2C08-5A3A-2B31-A1A5674B21CB">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>4994439F-9F10-366B-DA0A-8330C00EAB53</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="anio" id="5752C5DE-9BD5-B3D2-E0D2-242B9C6DB5EB">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>3F83D893-D88D-2FA1-0A17-42F2806E510F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cupoMaximo" id="CB0DFC64-078A-F7C6-1084-34748143B766">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>9EB77B4C-7381-AF37-5C62-C1456EAFA7A1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estudiantesAsignados" id="7FBD7124-6FF0-9BB1-C08A-48DBD1BB124A">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>3532D85C-AE32-C07D-263A-B0C5E5530BA0</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="siifDocente" id="220CE370-704F-723B-DF44-9B5929C2EAC9">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>466F7DD7-EA38-B3C4-CEDA-8CE962BFC89E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3AF239CB-56A0-2CA5-A4F7-A64EB8E33A7E" referredColumn="347EAD97-3AC8-BBE9-95EC-7E5487D7DAEA"/>
+</associations>
+</Column>
+<Column name="codigoCurso" id="769E35DA-755E-1ECA-77D1-6F9D7B919D8E">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>38D0122F-DDDA-A36F-A065-4F7421F04EB7</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E69D045A-94B1-29C0-448C-2DE5BFE35B8C" referredColumn="EB8A0092-961F-3830-EF18-C9E47D5F4CA8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9DD82CCA-A955-1FEE-2A05-36EE65274130" name="CURSO_HABILITADO_PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>A1B2B5F5-114C-F127-E542-D503A37B3A2F</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3FCC9DE0-5F9B-4777-2D87-5BF7BDB09CCF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AAC775BC-8373-9627-8007-FCD48FFEC812" name="CURSO_HABILITADO_DOCENTE_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>598AC7FF-251C-2BF2-5BE2-1CEE5ACAA9CB</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="220CE370-704F-723B-DF44-9B5929C2EAC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB7A9099-4482-507A-5164-32EB7DEFAAB7" name="CURSO_HABILITADO_CURSO_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>8584ECD7-D337-D160-E917-1388726625B1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="769E35DA-755E-1ECA-77D1-6F9D7B919D8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

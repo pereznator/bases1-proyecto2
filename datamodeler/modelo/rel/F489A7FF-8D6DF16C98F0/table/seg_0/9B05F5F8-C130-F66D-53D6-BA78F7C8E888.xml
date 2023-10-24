@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9B05F5F8-C130-F66D-53D6-BA78F7C8E888" name="DOCENTE">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>B98141EF-B99E-31B2-D9CE-11FCD6AD8BFE</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="siif" id="347EAD97-3AC8-BBE9-95EC-7E5487D7DAEA">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>76E5E934-3ADF-9279-3F17-0B5759387DF2</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombres" id="5B8BE59C-6CEE-81FF-347D-C3B92DE94242">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>D4F99796-7B58-8C91-0C89-DEC9285580E1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="apellidos" id="9134A3E4-7C1C-4514-DD96-AC6A79D63A79">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>CFE4D751-1999-D507-D620-F7E8E5A733CF</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dpi" id="276DD8A6-FF06-D870-F9D0-BC20AACD49A4">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>F3A9306D-F4C0-FFBA-D80B-2124EA79BB7A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fechaNacimiento" id="EE9F2DA2-6B2A-5E5A-4D2C-81FAF70593B0">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>A1883C60-A133-5C27-627F-F691A6D17CE4</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="CB500B93-39DD-9757-5CA9-47E2E2C3E650">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>70BDC8AA-4926-99FE-931A-F5E08889773B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="F695D3BA-2941-0400-ABD6-CD2E9208E052">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>CBDC512D-BE07-89DA-90D3-C91CB5176C10</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="E7B99AF0-FA45-797F-D0F8-17B2BD8384C5">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>54465FF1-886A-2EBA-FB4E-4CAC2C774A89</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250 CHAR</dataTypeSize>
+<ownDataTypeParameters>250 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="creado" id="11622022-4EA4-C574-8DE9-B83C2A6CD9F1">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>A9F27AC5-8ADE-2688-F765-C7B940D9C1E9</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="313161ED-4F87-A835-EBD0-E6181588FD86" name="DOCENTE_PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>39155371-ECE9-30B6-5328-E43DAA970EB0</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="347EAD97-3AC8-BBE9-95EC-7E5487D7DAEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

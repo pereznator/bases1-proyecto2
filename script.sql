@@ -46,7 +46,8 @@ CREATE TABLE curso (
 	creditosOtorgados INT NOT NULL,
 	carrera INT,
 	obligatorio BOOL NOT NULL,
-	PRIMARY KEY (codigo)
+	PRIMARY KEY (codigo),
+	FOREIGN KEY (carrera) REFERENCES carrera(id)
 );
 
 # TABLA CURSO HABILITADO
@@ -60,9 +61,12 @@ CREATE TABLE cursoHabilitado (
 	anio YEAR NOT NULL,
 	estudiantesAsignados INT NOT NULL DEFAULT 0,
 	PRIMARY KEY (id),
-	FOREIGN KEY (siifDocente) REFERENCES docente (siif)
+	FOREIGN KEY (siifDocente) REFERENCES docente (siif),
+	FOREIGN KEY (codigoCurso) REFERENCES curso(codigo)
 );
 
+ALTER TABLE cursoHabilitado
+ADD FOREIGN KEY (codigoCurso) REFERENCES curso (codigo);
 
 # TRIGGER PARA AGREGAR AÑO CADA VEZ QUE SE INSERTE UN REGISTRO EN LA TABLA CURSO HABILITADO
 CREATE TRIGGER ins_anio
@@ -106,9 +110,7 @@ CREATE TABLE acta (
 	PRIMARY KEY(idCursoHabilitado, ciclo, seccion, anio),
 	FOREIGN KEY (idCursoHabilitado) REFERENCES cursoHabilitado(id)
 );
-CREATE TRIGGER acta_anio
-BEFORE INSERT ON acta
-    FOR EACH ROW SET NEW.anio = YEAR(NOW());
+
 
 CREATE TABLE desasignacion (
 	id INT NOT NULL AUTO_INCREMENT,

@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B002228F-9FF6-076A-A250-ADB28848848E" name="NOTA">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>3DB8EEBB-1FF7-27B8-1A08-58B14C54D885</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCursoHabilitado1" id="416EDE95-B66F-B36E-A051-185ACF842493">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>0A044410-29E0-C6B5-5006-439FA14F8893</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B1B5E9F5-7BBA-5081-1328-9933D8021D17" referredColumn="3FCC9DE0-5F9B-4777-2D87-5BF7BDB09CCF"/>
+</associations>
+</Column>
+<Column name="carnet" id="97108E7E-A66F-AE70-014F-8E57558CDB93">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>91A93FDC-ED96-6CDC-A83D-6CEEE0FD364B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1790A69-88F8-F568-777D-B1B13DA31BD5" referredColumn="6434E800-4682-4809-E981-6F844673D766"/>
+</associations>
+</Column>
+<Column name="nota" id="DBFC32B6-D2E7-9706-3F71-B140418BD251">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>E9F95528-4090-125B-1AD2-AA614A6173DB</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="aprobado" id="77822320-5EAB-5240-4B3A-516F1F31D748">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>EB0784EF-A2B5-45EC-1E52-ABD9635CEF7A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1 BYTE</dataTypeSize>
+<ownDataTypeParameters>1 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B65D2FA5-3CCD-F3F2-533B-14A25E45F429" name="NOTA_PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>5E85EF0C-2F27-F059-7DAE-B4E426DDF2E4</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="416EDE95-B66F-B36E-A051-185ACF842493"/>
+<colUsage columnID="97108E7E-A66F-AE70-014F-8E57558CDB93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="061786EA-7652-3EE7-A1AA-50DD0F7B4AF2" name="NOTA_CURSO_HABILITADO_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>079631DC-D452-11C8-5E53-7DDEFFBA8AE4</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="416EDE95-B66F-B36E-A051-185ACF842493"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CCD07FE-DC93-2888-9C9A-E4790C37CB15" name="NOTA_ESTUDIANTE_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>E82DD04A-948E-B2DC-3DAE-8AD754AAC089</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97108E7E-A66F-AE70-014F-8E57558CDB93"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

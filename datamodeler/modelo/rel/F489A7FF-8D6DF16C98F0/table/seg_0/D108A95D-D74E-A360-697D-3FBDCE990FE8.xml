@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D108A95D-D74E-A360-697D-3FBDCE990FE8" name="DESASIGNACION">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>313DB12A-923F-8E99-19E2-933361EE5B73</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCursoHabilitado1" id="E3F6366A-154C-0AAD-BB24-F33A589D7D41">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>845C3405-8CEF-AA88-80BA-BE1E163D866C</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="944F52B3-7790-77C5-5081-271ACAF0F419" referredColumn="3FCC9DE0-5F9B-4777-2D87-5BF7BDB09CCF"/>
+</associations>
+</Column>
+<Column name="carnet1" id="8F18EC3D-0610-ECEA-69D7-FDF53EE6D4CC">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>817E3CCE-4FA7-CC92-1E19-FC8F50912592</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT027</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E427D7C8-A63B-14BB-9F67-239A1897191B" referredColumn="6434E800-4682-4809-E981-6F844673D766"/>
+</associations>
+</Column>
+<Column name="creado" id="348D2334-0B23-0E15-1294-527334342A1C">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>E180E452-C25E-280C-4F05-5019D5D8E229</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="99D67003-2FD4-DED8-F13B-666A1CD4A178" name="DESASIGNACION_PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>0CA8433D-E198-F25F-AB9D-D84BD3226D42</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3F6366A-154C-0AAD-BB24-F33A589D7D41"/>
+<colUsage columnID="8F18EC3D-0610-ECEA-69D7-FDF53EE6D4CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F57FB36D-E185-793C-0004-7D75B835724C" name="DESASIGNACION_CURSO_HABILITADO_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>7D873F06-1CE3-064F-7C2A-59BD187BCA8D</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3F6366A-154C-0AAD-BB24-F33A589D7D41"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="53799513-F9A3-A622-0E28-6EE6A0526B38" name="DESASIGNACION_ESTUDIANTE_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>33268B54-67C3-4036-5963-A92737867F62</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F18EC3D-0610-ECEA-69D7-FDF53EE6D4CC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

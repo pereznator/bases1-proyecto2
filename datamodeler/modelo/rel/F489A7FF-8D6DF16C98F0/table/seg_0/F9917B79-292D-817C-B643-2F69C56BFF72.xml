@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F9917B79-292D-817C-B643-2F69C56BFF72" name="HORARIO">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>941CCD28-0515-A8E6-F46F-F4BAB844FAC8</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCursoHabilitado" id="FC41EC78-6E0E-7793-DDB2-3BF4C2FCE687">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>5778915D-78CA-DBE6-3CE6-39B9BA8E2F08</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E69DCCA7-44E3-EE9C-F307-3473101E7F7E" referredColumn="3FCC9DE0-5F9B-4777-2D87-5BF7BDB09CCF"/>
+</associations>
+</Column>
+<Column name="dia" id="14F8C86D-B46B-8D42-100F-69943C1C7A19">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>61F1FF6D-EA08-16D7-D289-558D6F3BF5E2</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="horario" id="64EADEE4-2652-7A18-14AA-458BDDA8313F">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>60A7695B-06DC-52D4-DF9D-D90C2DB4FB13</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>11 CHAR</dataTypeSize>
+<ownDataTypeParameters>11 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C394080-C06F-4D5E-5B84-84AD687CC91F" name="HORARIO_PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>BDF24733-2B2D-3E1E-D9BB-316113F964D1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14F8C86D-B46B-8D42-100F-69943C1C7A19"/>
+<colUsage columnID="FC41EC78-6E0E-7793-DDB2-3BF4C2FCE687"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A6E33F47-6331-46C2-477A-E4F34420B8CC" name="HORARIO_CURSO_HABILITADO_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>089AA2D0-ED9D-D7AB-88D1-68FD373474CB</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC41EC78-6E0E-7793-DDB2-3BF4C2FCE687"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1509DD16-F4B6-AB6C-5CB4-1E5148EBFB8E" name="ACTA">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>CF37D84C-16E7-9724-A0DC-2F351DB31D4A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idCursoHabilitado1" id="3501A97B-44A1-5AC9-3B7D-D5D2BEE281B2">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>F993F600-1E35-985C-841B-A7F4F53D0D9E</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6290102B-A983-8A38-46C7-64B3769C1F3E" referredColumn="3FCC9DE0-5F9B-4777-2D87-5BF7BDB09CCF"/>
+</associations>
+</Column>
+<Column name="ciclo" id="1909597A-88C1-16B3-7C57-EDED5F2162F0">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>0558AD61-412D-BA52-F89C-5EA6559BA845</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2 CHAR</dataTypeSize>
+<ownDataTypeParameters>2 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="seccion" id="9049AE8F-2812-EBAF-2D74-81D053BAB630">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>B1BC4CCB-B23D-C0C6-E33B-155D5D82869A</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="anio" id="BAA8BC1C-11E3-1C10-1079-158DA11E41A6">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>7E39FE9A-BF94-74F1-0483-7335DC729ED1</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="creado" id="41880162-FC13-0FC7-6B4C-D609DE0DE9CA">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>B7868783-0D41-651A-F0EF-11EB8ECC8236</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="38F34A45-8669-DB6E-B7A3-EF5D296FCE77" name="ACTA_PK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>BECECFC6-E3DC-C3E1-0C77-53F5B723C900</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1909597A-88C1-16B3-7C57-EDED5F2162F0"/>
+<colUsage columnID="9049AE8F-2812-EBAF-2D74-81D053BAB630"/>
+<colUsage columnID="BAA8BC1C-11E3-1C10-1079-158DA11E41A6"/>
+<colUsage columnID="3501A97B-44A1-5AC9-3B7D-D5D2BEE281B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D851385A-7448-5EAB-5F4B-2322B6DF5C13" name="ACTA_CURSO_HABILITADO_FK">
+<createdBy>jorge</createdBy>
+<createdTime>2023-10-24 04:52:54 UTC</createdTime>
+<generatorID>2CDCD6BE-B842-8F66-0071-75DBDCC99B3B</generatorID>
+<ownerDesignName>modelo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3501A97B-44A1-5AC9-3B7D-D5D2BEE281B2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
